@@ -3,12 +3,28 @@
 :root {
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
+    --coral: #FF6B35;
+    --coral-light: #FFF0EB;
+    --coral-dark: #E85A28;
+    --peach: #FFE8DE;
+    --bg-page: #FAFAF8;
+    --bg-card: #FFFFFF;
+    --bg-sidebar: #FFF7F4;
+    --text-primary: #1A1A2E;
+    --text-secondary: #64748B;
+    --text-muted: #94A3B8;
+    --border-light: #F1EEEB;
+    --border-medium: #E8E5E1;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.08);
+    --shadow-card: 0 2px 8px rgba(0,0,0,0.04), 0 0 0 1px rgba(0,0,0,0.02);
 }
 
 body {
     font-family: var(--font-sans);
-    background-color: #0b0f19;
-    color: #e2e8f0;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
 }
 
 /* Custom scrollbars */
@@ -17,37 +33,119 @@ body {
     height: 6px;
 }
 ::-webkit-scrollbar-track {
-    background: #0f172a;
+    background: #F5F5F3;
 }
 ::-webkit-scrollbar-thumb {
-    background: #334155;
+    background: #D4D1CD;
     border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #475569;
+    background: #B8B5B1;
 }
 
-/* Glassmorphism badges and cards */
+/* Light Theme Cards */
 .glass-panel {
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(51, 65, 85, 0.4);
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-card);
 }
 
 .glass-card {
-    background: rgba(30, 41, 59, 0.5);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(71, 85, 105, 0.3);
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
     transition: all 0.2s ease;
 }
 
 .glass-card:hover {
-    border-color: rgba(99, 102, 241, 0.4);
-    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
+    border-color: var(--coral);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
 }
 
 .code-font {
     font-family: var(--font-mono);
+}
+
+/* Tab active state */
+.tab-btn.active {
+    background-color: var(--coral-light) !important;
+    color: var(--coral) !important;
+    font-weight: 700;
+}
+
+.tab-btn.active i {
+    color: var(--coral) !important;
+}
+
+.tab-btn:hover:not(.active) {
+    background-color: #F8F7F5;
+}
+
+/* Coral gradient button */
+.btn-coral {
+    background: linear-gradient(135deg, #FF6B35, #E85A28);
+    color: white;
+    box-shadow: 0 4px 14px rgba(255, 107, 53, 0.25);
+    transition: all 0.2s;
+}
+
+.btn-coral:hover {
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.35);
+    transform: translateY(-1px);
+}
+
+/* Rank number styling */
+.rank-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    min-width: 48px;
+    text-align: center;
+}
+
+.rank-number.rank-1 { color: #FF6B35; }
+.rank-number.rank-2 { color: #E85A28; }
+.rank-number.rank-3 { color: #D4A373; }
+
+/* Category pill tabs */
+.category-pill {
+    padding: 6px 16px;
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.category-pill.active {
+    background-color: var(--coral);
+    color: white;
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.25);
+}
+
+.category-pill:not(.active) {
+    background-color: white;
+    color: var(--text-secondary);
+    border-color: var(--border-medium);
+}
+
+.category-pill:not(.active):hover {
+    border-color: var(--coral);
+    color: var(--coral);
+}
+
+/* Sidebar widget */
+.sidebar-widget {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    padding: 20px;
 }
 
 /* Animation pulses */
@@ -58,4 +156,42 @@ body {
 
 .pulse-soft {
     animation: softPulse 2.5s infinite ease-in-out;
+}
+
+/* Smooth transitions */
+.tab-pane {
+    animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Table styling */
+table thead {
+    background: #FAFAF8;
+}
+
+table tbody tr:hover {
+    background: #FEFDFB;
+}
+
+/* Badge colors for light theme */
+.badge-opportunity { background: #ECFDF5; color: #059669; }
+.badge-threat { background: #FFF1F2; color: #E11D48; }
+.badge-neutral { background: #F8FAFC; color: #64748B; }
+.badge-high { background: #FFF1F2; color: #E11D48; }
+.badge-medium { background: #FFFBEB; color: #D97706; }
+.badge-low { background: #F8FAFC; color: #64748B; }
+
+/* Input styling for light theme */
+input, textarea, select {
+    font-family: var(--font-sans);
+}
+
+/* Modal overlay */
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
 }
