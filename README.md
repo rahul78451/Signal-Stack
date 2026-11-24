@@ -2,6 +2,16 @@
 > **Your company's automated intelligence officer.**  
 > It tracks what customers want, what competitors are launching, how regulations are changing, and what your sales team is hearing — then delivers a clean, decision-ready executive briefing every Monday morning.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Deployment-signal--stack--io.onrender.com-FF6B35?style=for-the-badge&logo=render&logoColor=white)](https://signal-stack-io.onrender.com/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+---
+
+### 🌐 Live Application
+👉 **Access Live Deployment:** **[https://signal-stack-io.onrender.com/](https://signal-stack-io.onrender.com/)**  
+*(Hosted on Render. Pre-configured with MeetUniversity, PostHog, and Razorpay intelligence stacks).*
+
 ---
 
 ## 🌟 What is SignalStack?
