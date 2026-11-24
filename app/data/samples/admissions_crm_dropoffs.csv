@@ -1,0 +1,9 @@
+student_id,destination,course_level,lead_source,counselor_stage,objection,drop_reason,recorded_date
+MU-2026-891,United Kingdom,Postgraduate MSc CS,Meta Ads,Offer Letter Received,Student refuses to pay university deposit due to UK Dependent Visa ban,UK dependent visa restrictions for spouse,2026-11-18
+MU-2026-892,Canada,Undergraduate BBA,Google Search,Profile Evaluation,Confused by Provincial Attestation Letter (PAL) requirement and caps,Ontario study permit quota uncertainty,2026-11-19
+MU-2026-893,Ireland,Postgraduate Data Analytics,Referral,Visa Filing,National Bank collateral property valuation took 6 weeks,Loan sanction delay,2026-11-20
+MU-2026-894,Germany,Masters AI & Robotics,Website Organic,University Application,APS verification certificate delayed by 3 months,APS administrative delay,2026-11-21
+MU-2026-895,Australia,Masters Public Health,Education Fair,Counseling Intake,Family worried about Genuine Student (GS) test refusal rate,High Australian visa refusal rumors,2026-11-22
+MU-2026-896,United Kingdom,MSc Business Analytics,Agent Sub-contractor,Offer Letter Received,Competitor LeapScholar offered zero processing fee and bundled loan,Switched to competitor for loan bundle,2026-11-22
+MU-2026-897,United States,MS Computer Science,Direct Web,Offer Letter Received,I-20 financial affidavit documentation required 4 revisions,Counselor SLA latency (3 weeks to review),2026-11-23
+MU-2026-898,Germany,Masters Mechanical Engg,WhatsApp Inquiry,Profile Evaluation,Cannot afford 11208 EUR blocked account upfront,Blocked account liquidity bottleneck,2026-11-23
